@@ -30,8 +30,8 @@ public class KeywordSuggestions {
                     .filter(word -> word.startsWith(s))
                     .sorted()
                     .limit(3)
-                    .collect(Collectors.toList());
-            res.add(keywordsList);
+                    .toList();
+            res.add(new ArrayList<>(keywordsList));
         }
         return res;
     }
