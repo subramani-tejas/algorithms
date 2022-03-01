@@ -18,4 +18,11 @@ public class RemoveDuplicatesFromStringTest {
         String modifiedTest = RemoveDuplicatesFromString.removeDuplicatesInWord(text);
         Assert.assertEquals("AaBbCc ", modifiedTest);
     }
+
+    @Test
+    public void removeDuplicatesFunctionalTest() {
+        String text = "AAAaaaBBbbCc   ";
+        String modifiedTest = RemoveDuplicatesFromString.removeDuplicatesFunctional(text.toCharArray());
+        Assert.assertEquals("AaBbCc ", modifiedTest);
+    }
 }
