@@ -8,11 +8,11 @@ import java.util.List;
 
 public class CountMoviesTest {
     List<Movie> movies = List.of(
-            new Movie("A", 12),
+            new Movie("Monsters Inc", 12),
             new Movie("B", 19),
             new Movie("C", 2),
             new Movie("D", 29),
-            new Movie("E", 191),
+            new Movie("Spiderman: No Way Home", 191),
             new Movie("F", 4),
             new Movie("G", 7)
     );
@@ -33,8 +33,9 @@ public class CountMoviesTest {
 
     @Test
     public void getMovieNamesTest() {
-        List<String> expected = Arrays.asList("A", "B", "C", "D", "E", "F", "G");
+        List<String> expected = Arrays.asList("Monsters Inc", "B", "C", "D", "Spiderman: No Way Home", "F", "G");
         List<String> actual = CountMovies.getMovieNames(movies);
+        System.out.println(actual);
         Assert.assertEquals(expected, actual);
     }
 }

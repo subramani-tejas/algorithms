@@ -2,6 +2,7 @@ package com.codewithtejas.mosh;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CountMovies {
     public static int getCountImperative(List<Movie> movies) {
@@ -17,11 +18,10 @@ public class CountMovies {
     }
 
     public static List<String> getMovieNames(List<Movie> movies) {
-        List<String> movieNames = new ArrayList<>();
-        movies.stream()
-                .map(movie -> movie.getTitle())
-                .forEach(name -> movieNames.add(name));
-        return movieNames;
+        return movies.stream()
+                .map(Movie::getTitle)
+                .collect(Collectors.toList());
+
     }
 }
 
