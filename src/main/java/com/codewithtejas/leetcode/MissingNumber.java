@@ -8,6 +8,7 @@ public class MissingNumber {
         System.out.println(missingNumber(arr));
     }
 
+    // cyclic sort
     public static int missingNumber(int[] nums) {
         int i = 0, n = nums.length;
 
