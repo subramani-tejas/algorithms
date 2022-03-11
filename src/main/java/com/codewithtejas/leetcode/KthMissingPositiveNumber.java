@@ -15,7 +15,7 @@ public class KthMissingPositiveNumber {
 
         while (l < r) {
             int mid = l + (r - l) / 2;
-            System.out.println(mid);
+            // System.out.println(mid);
             if (arr[mid] - (mid + 1) >= k) r = mid;
             else l = mid + 1;
         }
